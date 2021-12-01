@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Playgon</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../images/Logo.svg">
+    <script src="../js/trending.js" defer></script>
+    <script src="../js/search.js" defer></script>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="jquery.plate.js"></script>
+    
+  </head>
+  <body id>
+
+    <header id="header">
+      <span class="slide"> 
+        <a href="#" onclick="openSlideMenu()">
+          <img class="x" src="../images/menu (1).svg"></img>
+        </a>
+      </span>
+      <a href="landing.html">
+        <svg width="205" height="108" viewBox="0 0 205 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M56.2552 40.4832L71.3287 66.5913L56.2552 92.6994L26.1081 92.6994L11.0346 66.5913L26.1081 40.4832L56.2552 40.4832Z" fill="#F1C40F"/>
+        <path d="M117.841 40.4832L132.915 66.5913L117.841 92.6994L87.6943 92.6994L72.6208 66.5913L87.6943 40.4832L117.841 40.4832Z" fill="#D6AE0E"/>
+        <path d="M103.199 15.0735L118.272 41.1817L103.199 67.2898L73.0515 67.2898L57.978 41.1816L73.0515 15.0735L103.199 15.0735Z" fill="#D6AE0E"/>
+        <path d="M178.135 40.4832L193.209 66.5913L178.135 92.6994L147.988 92.6994L132.915 66.5913L147.988 40.4832L178.135 40.4832Z" fill="#F1C40F"/>
+        <path d="M163.493 15.0735L178.566 41.1817L163.493 67.2898L133.346 67.2898L118.272 41.1816L133.346 15.0735L163.493 15.0735Z" fill="#F1C40F"/>
+        </svg>
+      </a>
+      <form id="form">
+        <div class="header-info">
+          <button><img src="../images/search.svg"></button>
+          <input type="text" id="search" placeholder="Search Movies" class="search"></input>
+          <div class="profile">
+            <h2>John mayor</h2>
+            <img src="../images/profile.jpg">
+          </div>
+        </div>
+      </form>
+      <div class="header-links">
+        <a href="index.html">Movies</a>
+        <a href="trending.html">Trending</a>
+        <a href="upcoming.html">Coming Soon</a>
+        <a href="tvshows.html">TV-Shows</a>
+        <a href="#">Watch Later</a>
+      </div>
+      <div class="switch">
+        <i class="bx bx-moon change theme" id="theme-button" style="font-size: 1.5em;"></i>
+      </div>
+    </header>
+
+    <div id="content">
+      <div id="menu" class="nav">
+        <a href="#" class="close" onclick="closesSlideMenu()">
+          <img class="x" src="../images/x.svg">
+        </a>
+        <ul>
+          <li><a href="index.html">Movies</a></li>
+          <li><a href="trending.html">Trending</a></li>
+          <li><a href="upcoming.html">Coming Soon</a></li>
+          <li><a href="tvshows.html">TV-Shows</a></li>
+          <li><a href="#">Watch Later</a></li>
+          <hr>
+          <li id="users"><h4>User's Online</h4><span id="user_count">3</span></li>
+        </ul>
+      </div>
+      <div class="title">
+        <h1 id="title-text">Trending Movies</h1>
+      </div>
+      <main id="main"></main>
+    </div>
+
+    <div id="myNav" class="overlay">
+      <a onclick="closeNav()"><img src="../images/x.svg" class="closebtn"></img></a>
+      <div class="overlay-content" id="overlay-content"></div>
+    </div>
+
+    <div class="footer-line"></div>
+
+    <div class="pagenation">
+      <div class="page" id="prev">Previous Page</div>
+      <div class="current" id="current">1</div>
+      <div class="page" id="next">Next Page</div>
+    </div>
+  </body>
+</html>

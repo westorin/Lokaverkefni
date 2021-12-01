@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Playgon</title>
+    <meta name="description" content="This is a school project. In this project I create a movieDB website." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../images/Logo.svg">
+
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!--========== ICONS ==========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+
+    <!--========== JS ==========-->
+    <script src="../js/script.js" defer></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  </head>
+  <!--========== BODY ==========-->
+  <body>
+    <!--========== HEADER ==========-->
+    <header id="header">
+      <span class="slide"> 
+        <a href="#" onclick="openSlideMenu()">
+          <i class="bx bx-menu" style="font-size: 2.5em"></i>
+        </a>
+      </span>
+      <a href="landing.html">
+        <svg width="205" height="108" viewBox="0 0 205 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M56.2552 40.4832L71.3287 66.5913L56.2552 92.6994L26.1081 92.6994L11.0346 66.5913L26.1081 40.4832L56.2552 40.4832Z" fill="#F1C40F"/>
+        <path d="M117.841 40.4832L132.915 66.5913L117.841 92.6994L87.6943 92.6994L72.6208 66.5913L87.6943 40.4832L117.841 40.4832Z" fill="#D6AE0E"/>
+        <path d="M103.199 15.0735L118.272 41.1817L103.199 67.2898L73.0515 67.2898L57.978 41.1816L73.0515 15.0735L103.199 15.0735Z" fill="#D6AE0E"/>
+        <path d="M178.135 40.4832L193.209 66.5913L178.135 92.6994L147.988 92.6994L132.915 66.5913L147.988 40.4832L178.135 40.4832Z" fill="#F1C40F"/>
+        <path d="M163.493 15.0735L178.566 41.1817L163.493 67.2898L133.346 67.2898L118.272 41.1816L133.346 15.0735L163.493 15.0735Z" fill="#F1C40F"/>
+        </svg>
+      </a>
+      <form id="form">
+        <div class="header-info">
+          <button><i class="bx bx-search" style="font-size: 2em;"></i></button>
+          <input type="text" id="search" placeholder="Search Movies" class="search">
+          <div class="profile">
+            <h2>John mayor</h2>
+            <img src="../images/user.svg">
+          </div>
+        </div>
+      </form>
+      <div class="header-links">
+        <a href="index.html">Movies</a>
+        <a href="trending.html">Trending</a>
+        <a href="upcoming.html">Coming Soon</a>
+        <a href="tvshows.html">TV-Shows</a>
+        <a href="#">Watch Later</a>
+      </div>
+      <div class="switch">
+        <i class="bx bx-moon change theme" id="theme-button" style="font-size: 1.5em;"></i>
+      </div>
+    </header>
+    <!--========== CONTENT ==========-->
+    <div id="content">
+      <!--========== SIDEBAR ==========-->
+      <div id="menu" class="nav">
+        <a href="#" class="close" onclick="closesSlideMenu()">
+          <i class="bx bx-x" style="font-size: 3em;"></i>
+        </a>
+        <ul>
+          <li><a href="index.html">Movies</a></li>
+          <li><a href="trending.html">Trending</a></li>
+          <li><a href="upcoming.html">Coming Soon</a></li>
+          <li><a href="tvshows.html">TV-Shows</a></li>
+          <li><a href="#">Watch Later</a></li>
+          <hr>
+          <li id="users"><h4>User's Online</h4><span id="user_count">3</span></li>
+        </ul>
+      </div>
+      <h1 id="title-result">Search Results</h1>
+      <div class="title">
+        <br>
+        <h2 id="title-text">Popular Movies</h2>
+      </div>
+      <!--========== MAIN ==========-->
+      <main id="main"></main>
+    </div>
+
+    <!--========== OVERLAY ==========-->
+    <div id="myNav" class="overlay">
+      <a onclick="closeNav()"><img src="../images/x.svg" class="closebtn" id="closebtn"></img></a>
+      <div class="overlay-content" id="overlay-content"></div>
+    </div>
+
+    <div class="footer-line"></div>
+    
+    <!--========== PAGENATION ==========-->
+    <div class="pagenation" id="pagenation1">
+      <div class="page" id="prev">Previous Page</div>
+      <div class="current" id="current">1</div>
+      <div class="page" id="next">Next Page</div>
+    </div>
+
+    <!--========== FOOTER ==========-->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="landing.html"><img src="../images/Logo.svg"></a>
+        </div>
+        <div class="footer-media">
+          <a href="https://www.facebook.com/profile.php?id=100012195847913" target="_blank"><svg href="facebook.com" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+          <a href="https://twitter.com/westorin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+          <a href="https://www.linkedin.com/in/kristj%C3%A1n-valur-g%C3%ADslason-5a005a225/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          <a href="https://www.youtube.com/channel/UCua32Ge4WVykvS7GyIoaHYg" target="blank_"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-help-circle"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></a>
+        </div>
+        <div class="footer-rights">
+          <p>© 2021 All Rights Reserved. Terms of Use.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+<!--========== LOKAVERKEFNI 2021 ==========-->
